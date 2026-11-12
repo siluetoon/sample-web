@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dirgahayu Republik Indonesia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Montserrat:ital,wght@0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="independence.css">
+</head>
+<body>
+  <div class="scene" id="scene">
+    <!-- Layer Bintang Terserak (Interactive Starfield) -->
+    <div class="stars-container" id="stars-container"></div>
+
+    <!-- Background Elements -->
+    <div class="sky-elements">
+      <!-- Burung-burung camar -->
+      <svg class="seagull seagull-1" viewBox="0 0 50 20" aria-hidden="true">
+        <path d="M 0 14 Q 12 0 25 10 Q 38 0 50 14 Q 38 6 25 14 Q 12 6 0 14 Z" fill="#ffffff" opacity="0.9" />
+      </svg>
+      <svg class="seagull seagull-2" viewBox="0 0 50 20" aria-hidden="true">
+        <path d="M 0 14 Q 12 0 25 10 Q 38 0 50 14 Q 38 6 25 14 Q 12 6 0 14 Z" fill="#ffffff" opacity="0.9" />
+      </svg>
+      <svg class="seagull seagull-3" viewBox="0 0 50 20" aria-hidden="true">
+        <path d="M 0 14 Q 12 0 25 10 Q 38 0 50 14 Q 38 6 25 14 Q 12 6 0 14 Z" fill="#ffffff" opacity="0.9" />
+      </svg>
+      <svg class="seagull seagull-4" viewBox="0 0 50 20" aria-hidden="true">
+        <path d="M 0 14 Q 12 0 25 10 Q 38 0 50 14 Q 38 6 25 14 Q 12 6 0 14 Z" fill="#ffffff" opacity="0.9" />
+      </svg>
+
+      <!-- Matahari Terbit/Terbenam -->
+      <div class="sun-wrapper">
+        <div class="sun-glow"></div>
+        <div class="sun"></div>
+      </div>
+
+      <!-- Awan Kiri -->
+      <div class="clouds-left">
+        <svg viewBox="0 0 450 500" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="cloudGradLeftShade" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#bce3fa" />
+              <stop offset="100%" stop-color="#def1fc" />
+            </linearGradient>
+            <linearGradient id="cloudGradWhite" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#ffffff" />
+              <stop offset="100%" stop-color="#f0f8fd" />
+            </linearGradient>
+          </defs>
+          <!-- Back cloud shadow -->
+          <path d="M -50 500 L -50 220 Q -30 140 50 170 Q 110 130 180 180 Q 240 210 230 300 Q 280 340 270 420 Q 250 500 -50 500 Z" fill="url(#cloudGradLeftShade)" opacity="0.75" />
+          <!-- Mid cloud -->
+          <path d="M -50 500 L -50 280 Q 20 220 90 260 Q 160 210 230 290 Q 260 380 230 460 Q 180 500 -50 500 Z" fill="#e4f4fd" />
+          <!-- Front puffy cloud -->
+          <path d="M -50 500 L -50 340 Q 10 290 70 330 Q 120 270 180 330 Q 220 370 200 450 Q 170 500 -50 500 Z" fill="url(#cloudGradWhite)" />
+        </svg>
+      </div>
+
+      <!-- Awan Kanan -->
+      <div class="clouds-right">
+        <svg viewBox="0 0 500 550" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="cloudGradRightShade" x1="100%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#c1e5fb" />
+              <stop offset="100%" stop-color="#eaf5fd" />
+            </linearGradient>
+          </defs>
+          <!-- Back cloud -->
+          <path d="M 550 550 L 550 180 Q 480 100 400 150 Q 320 110 250 170 Q 190 220 220 310 Q 170 370 200 460 Q 220 550 550 550 Z" fill="url(#cloudGradRightShade)" opacity="0.8" />
+          <!-- Mid cloud -->
+          <path d="M 550 550 L 550 230 Q 490 170 410 210 Q 320 180 270 270 Q 220 330 250 430 Q 290 550 550 550 Z" fill="#ebf6fd" />
+          <!-- Front cloud -->
+          <path d="M 550 550 L 550 310 Q 480 250 410 300 Q 340 270 300 350 Q 270 420 310 500 Q 360 550 550 550 Z" fill="url(#cloudGradWhite)" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Centerpiece Content -->
+    <main class="centerpiece">
+      <!-- Tiang dan Bendera Merah Putih -->
+      <div class="flag-section">
+        <svg class="flag-svg" viewBox="0 0 180 150">
+          <defs>
+            <!-- Bayangan gelombang bendera -->
+            <linearGradient id="flagRedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#e81b23" />
+              <stop offset="35%" stop-color="#ff3b42" />
+              <stop offset="65%" stop-color="#cc1118" />
+              <stop offset="100%" stop-color="#ee2129" />
+            </linearGradient>
+            <linearGradient id="flagWhiteGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#f8f9fa" />
+              <stop offset="35%" stop-color="#ffffff" />
+              <stop offset="65%" stop-color="#d6dadf" />
+              <stop offset="100%" stop-color="#ffffff" />
+            </linearGradient>
+            <filter id="flagShadow" x="-10%" y="-10%" width="130%" height="130%">
+              <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.18" />
+            </filter>
+          </defs>
+
+          <!-- Tiang Bendera -->
+          <rect x="52" y="10" width="4.5" height="138" rx="2" fill="#9b2226" />
+          <circle cx="54.2" cy="10" r="4.5" fill="#a4262b" />
+
+          <!-- Kain Bendera Bergelombang -->
+          <g filter="url(#flagShadow)">
+            <!-- Bagian Merah -->
+            <path d="M 56 18 
+                     C 85 8, 115 32, 155 18 
+                     L 158 54 
+                     C 120 68, 88 44, 56 54 
+                     Z" 
+                  fill="url(#flagRedGrad)" />
+            <!-- Bagian Putih -->
+            <path d="M 56 54 
+                     C 88 44, 120 68, 158 54 
+                     L 160 88 
+                     C 122 102, 85 78, 56 88 
+                     Z" 
+                  fill="url(#flagWhiteGrad)" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Badge 17 AGUSTUS -->
+      <div class="date-badge">
+        <span>17 AGUSTUS</span>
+      </div>
+
+      <!-- Angka Tahun Interaktif dengan Burst Rays -->
+      <div class="year-wrapper">
+        <!-- Burst Rays Kiri -->
+        <div class="burst-rays burst-left" aria-hidden="true">
+          <span class="ray ray-top"></span>
+          <span class="ray ray-bottom"></span>
+        </div>
+
+        <!-- Tombol / Elemen Angka Tahun -->
+        <button class="year-button" id="year-btn" aria-label="Klik untuk menurunkan tahun">
+          <span class="year-display" id="year-display">2027</span>
+        </button>
+
+        <!-- Burst Rays Kanan -->
+        <div class="burst-rays burst-right" aria-hidden="true">
+          <span class="ray ray-top"></span>
+          <span class="ray ray-bottom"></span>
+        </div>
+      </div>
+
+      <!-- Teks Dirgahayu Republik Indonesia -->
+      <div class="slogan-container">
+        <div class="dirgahayu-line">
+          <span class="decor-bar"></span>
+          <h2 class="dirgahayu-text">DIRGAHAYU</h2>
+          <span class="decor-bar"></span>
+        </div>
+        <h1 class="republic-text">REPUBLIK INDONESIA</h1>
+      </div>
+
+      <!-- Pita Merah Putih Bergelombang Bawah -->
+      <div class="ribbon-container">
+        <svg class="ribbon-svg" viewBox="0 0 320 60" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="ribbonRed" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#ba1f25" />
+              <stop offset="50%" stop-color="#e62028" />
+              <stop offset="100%" stop-color="#ba1f25" />
+            </linearGradient>
+            <linearGradient id="ribbonWhite" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#dfdfdf" />
+              <stop offset="50%" stop-color="#ffffff" />
+              <stop offset="100%" stop-color="#dfdfdf" />
+            </linearGradient>
+          </defs>
+          <!-- Pita Merah Atas -->
+          <path d="M 15 22 
+                   C 75 1, 140 38, 205 18 
+                   C 250 4, 280 2, 305 20 
+                   C 275 14, 235 22, 195 31 
+                   C 130 45, 75 16, 15 22 
+                   Z" 
+                fill="url(#ribbonRed)" />
+          <!-- Pita Putih Bawah -->
+          <path d="M 25 24 
+                   C 78 20, 130 47, 195 32 
+                   C 235 23, 275 15, 300 22 
+                   C 265 26, 230 37, 185 45 
+                   C 125 56, 75 32, 25 24 
+                   Z" 
+                fill="url(#ribbonWhite)" />
+        </svg>
+      </div>
+
+      <!-- Pesan Kemerdekaan 1945 (Tampil saat mencapai 1945) -->
+      <div class="proclamation-banner" id="proclamation-banner">
+        <div class="banner-inner">
+          <span class="banner-star">★</span>
+          <span class="banner-title">TITIK AWAL KEMERDEKAAN: 17 AGUSTUS 1945</span>
+          <span class="banner-star">★</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Lautan dan Gelombang Ombak (Maritime Ocean Section) -->
+    <footer class="ocean">
+      <!-- Pantulan Sinar Matahari Vertikal di Permukaan Air -->
+      <div class="sun-reflection">
+        <div class="reflection-glow"></div>
+        <div class="reflection-diamonds">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Gelombang 1 (Paling Jauh / Cakrawala) -->
+      <div class="wave wave-layer-1">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <path d="M 0 40 Q 180 15 360 40 T 720 40 T 1080 40 T 1440 40 L 1440 120 L 0 120 Z" fill="#308be7" />
+        </svg>
+      </div>
+
+      <!-- Gelombang 2 (Tengah Atas) -->
+      <div class="wave wave-layer-2">
+        <svg viewBox="0 0 1440 130" preserveAspectRatio="none">
+          <path d="M 0 35 C 240 10, 480 50, 720 30 C 960 10, 1200 45, 1440 30 L 1440 130 L 0 130 Z" fill="#1e77d8" />
+        </svg>
+      </div>
+
+      <!-- Pola Highlight & Ripple Ombak Putih -->
+      <div class="wave-highlights">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
+          <path d="M 60 40 Q 140 30 220 42 M 350 50 Q 430 40 520 52 M 650 35 Q 740 22 830 36 M 920 48 Q 1020 36 1120 50 M 1220 38 Q 1310 28 1400 40" 
+                stroke="#a6e0fd" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.75" />
+          <path d="M 120 70 Q 240 55 360 72 M 500 78 Q 620 62 760 76 M 880 68 Q 990 52 1100 68 M 1200 76 Q 1320 60 1420 74" 
+                stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.85" />
+        </svg>
+      </div>
+
+      <!-- Gelombang 3 (Depan / Biru Tua Bawah) -->
+      <div class="wave wave-layer-3">
+        <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+          <path d="M 0 45 C 200 20, 420 65, 680 40 C 920 15, 1180 60, 1440 35 L 1440 140 L 0 140 Z" fill="#1360bd" />
+        </svg>
+      </div>
+
+      <!-- Gelombang 4 (Paling Depan / Gelap Pekat dengan Ripple Terang) -->
+      <div class="wave wave-layer-4">
+        <svg viewBox="0 0 1440 150" preserveAspectRatio="none">
+          <path d="M 0 50 C 260 20, 520 70, 780 40 C 1040 15, 1260 65, 1440 45 L 1440 150 L 0 150 Z" fill="#0d4c9d" />
+        </svg>
+      </div>
+
+      <!-- Ripple Buih Putih Ombak Paling Depan -->
+      <div class="foreground-ripples">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+          <path d="M 40 30 Q 180 10 320 32 Q 460 50 600 25 Q 740 5 880 28 Q 1020 45 1160 22 Q 1300 8 1420 30" 
+                stroke="#ffffff" stroke-width="3.5" fill="none" opacity="0.9" stroke-linecap="round" />
+        </svg>
+      </div>
+    </footer>
+
+    <!-- Petunjuk Interaksi Floating Bawah -->
+    <div class="interactive-hint" id="interactive-hint">
+      <span class="hint-icon">👆</span>
+      <span class="hint-text">Klik tahun <strong>2027</strong> untuk kilas balik hingga <strong>1945</strong> & taburkan bintang!</span>
+      <span class="star-badge" id="star-count-badge">⭐ <span id="star-counter">0</span></span>
+    </div>
+  </div>
+
+  <script src="independence.js"></script>
+</body>
+</html>
